@@ -1,0 +1,67 @@
+body{
+    margin:0;
+    padding: 0;
+    background: lavender;
+}
+.heading,.news-title{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+padding-top:5px ;
+margin-top:10px;
+margin-bottom:10px ;
+}
+
+.container{
+    margin-top:20px;
+    margin:5px;
+    border: 2px solid silver;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   
+   
+    box-shadow: 0 4px 4px 4px silver;
+    background:linear-gradient(to right,rgba(200, 255, 0, 0.637),rgba(25, 0, 255, 0.377));
+}
+.world,.nepal{
+    
+   
+    border:1px solid grey;
+    box-shadow: 2px 2px 2px black;
+    margin-top:5px ;
+    margin-bottom: 5px;
+    margin-left:5px ;
+    margin-right: 5px;
+    background: linear-gradient(to left,teal,brown);
+}
+
+.world-data,.nepal-data{
+        text-align: left;
+    font-weight: bolder;
+}
+.data{
+    border:1px solid black;
+   margin:1px;
+}
+.title{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+.news-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.news{
+    margin-left:5px;
+    margin-right:5px;
+    border:1px solid black;
+    margin-top:10px;
+    box-shadow: 1px 2px 2px grey;
+    /* background: linear-gradient(to left,teal,brown); */
+}
+img{
+    height:20vh;
+}
+
+
+
