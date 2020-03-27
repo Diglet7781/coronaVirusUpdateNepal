@@ -49,7 +49,7 @@ margin-bottom:10px ;
 }
 .news-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 .news{
     margin-left:5px;
