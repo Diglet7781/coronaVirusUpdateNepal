@@ -19,7 +19,7 @@
 
 const totalCases=document.getElementById("totalCases");
 
-totalCases.innerText="5678";
+
 
 const newsTitle=document.getElementById("newsTitle");
 const newsImg=document.getElementById("newsImg");
