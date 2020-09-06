@@ -29,25 +29,30 @@ let title,img,summary,url;
 const news=[{title,img,summary,url}];
 const coronaVirusNewsApi="https://nepalcorona.info/api/v1/news?limit=10";
 const coronaVirusDataNepal="https://nepalcorona.info/api/v1/data/nepal";
-const coronaVirusDataWorld="https://nepalcorona.info/api/v1/data/world";
+const coronaVirusDataWorld="https://data.nepalcorona.info/api/v1/world";
 
 //get data for Nepal
 fetch(coronaVirusDataNepal).then(res=>res.json()).then(res=>{
+    console.log(res);
     document.getElementById("totalTested").innerText=res.tested_total;
     document.getElementById("testedPositive").innerText=res.tested_positive;
     document.getElementById("testedNegative").innerText=res.tested_negative;
-    console.log(res.tested_total);
+    document.getElementById("deathsNepal").innerText=res.deaths;
+    document.getElementById("recoveredNepal").innerText=res.recovered;
+    document.getElementById("quarantinedNepal").innerText=res.quarantined;
+    document.getElementById("In-isolation").innerText=res.in_isolation;
+    document.getElementById("Total RDT").innerText=res.tested_rdt;
 });
 
 //get data for world
 fetch(coronaVirusDataWorld).then(res=>res.json()).then(res=>{
-   document.getElementById("totalCases").innerText=(res[((res.length)-1)].totalCases);
-   document.getElementById("newCases").innerText=(res[((res.length)-1)].newCases);
-   document.getElementById("totalDeaths").innerText=(res[((res.length)-1)].totalDeaths);
-   document.getElementById("newDeaths").innerText=(res[((res.length)-1)].newDeaths);
-   document.getElementById("activeCases").innerText=(res[((res.length)-1)].activeCases);
-   document.getElementById("totalRecovered").innerText=(res[((res.length)-1)].totalRecovered);
-   document.getElementById("criticalCases").innerText=(res[((res.length)-1)].criticalCases);
+   document.getElementById("totalCases").innerText=(res.cases);
+   document.getElementById("newCases").innerText=(res.todayCases);
+   document.getElementById("totalDeaths").innerText=(res.deaths);
+   document.getElementById("newDeaths").innerText=(res.todayDeaths);
+   document.getElementById("activeCases").innerText=(res.active);
+   document.getElementById("totalRecovered").innerText=(res.recovered);
+   document.getElementById("criticalCases").innerText=(res.critical);
 })
 
 
@@ -59,9 +64,11 @@ fetch(coronaVirusNewsApi).then(res=>{
 // console.log(res);
 for(let i=0;i<10;i++){
     // console.log(res.data[i]);
-   
-    const newsDiv=document.createElement('div');
-    newsDiv.className="news";
+    const row=document.createElement('div');
+    row.className="row";
+    const col = document.createElement('div');
+    col.className='col-lg-6 col-xs-12 col-md-6 news';
+    col.setAttribute('id', 'newsColumn');
     const h1=document.createElement("h1");
     h1.setAttribute("id","newsTitle");
     h1.innerText=res.data[i].title;
@@ -75,15 +82,16 @@ for(let i=0;i<10;i++){
     const a=document.createElement("a");
     a.setAttribute("href",res.data[i].url);
     a.innerText="Read more at";
-console.log(res.data[i].img_url);
-    newsDiv.appendChild(h1);
-    newsDiv.appendChild(img);
-    newsDiv.appendChild(p);
-    newsDiv.appendChild(a);
+    // console.log(res.data[i].img_url);
+    col.appendChild(h1);
+    col.appendChild(img);
+    col.appendChild(p);
+    col.appendChild(a);
+    row.appendChild(col);
 
     const containerDiv=document.querySelector(".news-container");
 
-    containerDiv.appendChild(newsDiv);  
+    containerDiv.appendChild(row);  
     
 }
 });

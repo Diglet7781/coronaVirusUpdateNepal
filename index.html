@@ -5,34 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Corona api</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="heading">Corona Virus Live Statistics</div>
-    <div class="container">
-        <div class="world">
-            <div class="title">World</div>
-            <div class="world-data">
-                <div class="data">Total Cases:<span id="totalCases"></span></div>
-                <div class="data">New Cases:<span id="newCases"></span></div>
-                <div class="data">Total Deaths:<span id="totalDeaths"></span></div>
-                <div class="data">New Death:<span id="newDeaths"></span></div>
-                <div class="data">Active Cases:<span id="activeCases"></span></div>
-                <div class="data">Total Recovered:<span id="totalRecovered"></span></div>
-                <div class="data">Critical Cases:<span id="criticalCases"></span></div>
-            </div>
-        </div>
-        <div class="nepal">
-                <div class="title">Nepal</div>
-                <div class="nepal-data">
-                        <div class="data">Total Tested:<span id="totalTested"></span></div>
-                        <div class="data">Tested Positive:<span id="testedPositive"></span></div>
-                        <div class="data">Tested Negative:<span id="testedNegative"></span></div>
-                       
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-xs-12 world">
+                        <caption><strong>World</strong></caption>
+                        <table>
+                            <tr>
+                                <td class="data">Total Cases:</td>
+                                <td id="totalCases"></td>
+                            </tr>
+                            <tr>
+                                <td class="data">Cases Today:</td>
+                                <td id="newCases"></td>
+                            </tr>
+                            <tr>
+                                <td class="data">Total Deaths:</td>
+                                <td id="totalDeaths"></td>
+                            </tr>
+                            <tr>
+                                <td class="data">Death Today:</td>
+                                <td id="newDeaths"></td>
+                            </tr>
+                            <tr>
+                                <td class="data">Active Cases:</td>
+                                <td id="activeCases"></td>
+                            </tr>
+                            <tr>
+                                <td class="data">Total Recovered:</td>
+                                <td id="totalRecovered"></td>
+                            </tr>
+                            <tr>
+                                <td class="data">Critical Cases:</td>
+                                <td id="criticalCases"></td>
+                            </tr>
+                        </table>
                     </div>
+
+                    <div class="col-lg-6 col-md-6 col-xs-12 nepal">
+                        <caption><strong>Nepal</strong></caption>
+                        <table>
+                            <tr>
+                                <td class="data">Total Tested:</td>
+                                <td id="totalTested"></td>
+                            </tr>
+                            <tr>
+                                <td class="data">Tested Positive:</td>
+                                <td id="testedPositive"></td>
+                            </tr>
+                            <tr>
+                                <td class="data">Tested Negative:</td>
+                                <td id="testedNegative"></td>
+                            </tr>
+                            <tr>
+                                <td class="data">Total Deaths:</td>
+                                <td id="deathsNepal"></td>
+                            </tr>
+                            <tr>
+                                <td class="data">Recovered:</td>
+                                <td id="recoveredNepal"></td>
+                            </tr>
+                            <tr>
+                                <td class="data">Quarantined:</td>
+                                <td id="quarantinedNepal"></td>
+                            </tr>
+                            <tr>
+                                <td class="data">In-isolation:</td>
+                                <td id="In-isolation"></td>
+                            </tr>
+                            <tr>
+                                <td class="data">Total RDT:</td>
+                                <td id="Total RDT"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
         </div>
     </div>
-    <div class="news-title">Latest News</div>
+    <div class="heading">Latest News</div>
     <div class="news-container">
         
        

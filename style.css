@@ -1,72 +1,70 @@
 body{
     margin:0;
     padding: 0;
-    background: lavender;
+    background-color: aquamarine;
 }
-.heading,.news-title{
+.heading{
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-padding-top:5px ;
-margin-top:10px;
-margin-bottom:10px ;
+    padding-top:5px ;
+    margin-top:10px;
+    margin-bottom:10px ;
+    background-color: rgb(223, 203, 23);
+    border-radius: 20px;
 }
-
+table, td {
+  border:none !important;
+}
 .container{
-    margin-top:20px;
-    margin:5px;
-    border: 2px solid silver;
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   padding: 5px;
-   border-radius: 10px;
-    box-shadow: 0 4px 4px 4px silver;
-    background:linear-gradient(to right,rgba(200, 255, 0, 0.637),rgba(25, 0, 255, 0.377));
-}
-.world,.nepal{
-    
-    border-radius: 10px;
-    border:1px solid grey;
-    box-shadow: 2px 2px 2px black;
-    margin-top:5px ;
-    margin-bottom: 5px;
-    margin-left:5px ;
-    margin-right: 5px;
-    background: linear-gradient(to left,teal,brown);
-    
+    /* background: tan; */
+    font-weight: bolder;
+    border-radius: 20px;
 }
 
-.world-data,.nepal-data{
-        text-align: left;
-    font-weight: bolder;
-    padding: 5px;
-    
+.nepal, .world{
+    border:2px solid black;
+    border-radius: 20px;
+    background: tan;
+ 
 }
+
 .data{
     border:1px solid black;
-   margin:1px;
+    margin:1px;
 }
 .title{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;
 }
-.news-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.news{
-    margin-left:5px;
-    margin-right:5px;
-    border:1px solid black;
-    margin-top:10px;
-    box-shadow: 1px 2px 2px grey;
-    border-radius: 10px;
-    padding: 5px;
-    background: linear-gradient(to left,teal,brown);
-}
+
 img{
     height:20vh;
 }
+.news{
+    background-color: tan;
+    margin:3px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 760px){
+    #newsColumn{
+      margin:3px;
+    }
+    .news-container{
+        margin-left: 10px;
+    }
+}
+@media only screen and (min-width: 761px){
+    #newsColumn{
+       margin-left: 30%;
+       margin-right: 30%;
+    }
+}
+
+
+
+
 
 
 
